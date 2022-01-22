@@ -9,8 +9,8 @@ pipeline {
         }
         stage('buildAndStartApp') {
             steps {
-                // bat 'mvn clean package'
-				 bat 'mvn spring-boot:run -Dserver.port=8989 &'
+					bat 'mvn clean install'
+				// bat 'mvn spring-boot:run -Dserver.port=8989 &'
             }
         }
 		
