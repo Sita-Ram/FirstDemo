@@ -7,10 +7,11 @@ pipeline {
                 git url:'https://github.com/Sita-Ram/FirstDemo.git'
             }
         }
-        stage('build') {
+        stage('buildAndStartApp') {
             steps {
-                 bat 'mvn clean package'
+                // bat 'mvn clean package'
+				 bat './mvnw spring-boot:run -Dserver.port=8989 &'
             }
         }
-    }
-}
+		
+	}
