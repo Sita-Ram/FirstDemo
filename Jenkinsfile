@@ -29,8 +29,8 @@ pipeline {
 		
 		  stage('startServer') {
             steps {
-					//bat "${tomcatBin}\\startup.bat"
-					sleep(time:1000,unit:"SECONDS")
+					bat "${tomcatBin}\\startup.bat"
+					sleep(time:100,unit:"SECONDS")
 				// bat 'mvn spring-boot:run -Dserver.port=8989 &'
 				
 				//bat """
