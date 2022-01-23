@@ -36,6 +36,8 @@
 	</dependencies>
 
 	<build>
+	<!-- You could see finalName within build tags of your pom file. By default, the finalName is ${artifactId}-${version} and this is the name of the bundled project once it is finally built (jar or war or ear)-->
+			
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>

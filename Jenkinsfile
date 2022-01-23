@@ -27,5 +27,11 @@ pipeline {
             }
         }
 		
+		  stage('startServer') {
+            steps {
+					bat "{tomcatBin}\\startup.bat"
+				// bat 'mvn spring-boot:run -Dserver.port=8989 &'
+            }
+        }
 	}
 }
