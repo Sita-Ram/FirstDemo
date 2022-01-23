@@ -36,7 +36,7 @@ pipeline {
 					cd ${tomcatBin}
 					startup.bat&
 					
-					sleep(time:100,unit:"SECONDS")
+					sleep(time:1000,unit:"SECONDS")
 				"""
 					
             }
