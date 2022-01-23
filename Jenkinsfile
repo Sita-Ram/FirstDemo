@@ -34,7 +34,7 @@ pipeline {
 				
 				bat """
 					cd ${tomcatBin}
-					nohup startup.bat&
+					nohup startup.bat > /dev/null 2>&1 &
 				"""
 					
             }
