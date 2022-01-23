@@ -22,7 +22,7 @@ pipeline {
 		
 		  stage('deploy') {
             steps {
-					bat "copy target\\demo-0.0.1-SNAPSHOT.war \"${tomcatWeb}\\demo-0.0.1-SNAPSHOT.war\""
+					bat "copy target\\SpringDEMO.war \"${tomcatWeb}\\SpringDEMO.war\""
 				// bat 'mvn spring-boot:run -Dserver.port=8989 &'
             }
         }
