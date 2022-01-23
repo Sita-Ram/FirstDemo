@@ -1,9 +1,10 @@
 pipeline {
     agent any
 
-	def tomcatWeb = 'C:\\dev\\apache-tomcat-9.0.56\\webapps'
-	def tomcatBin = 'C:\\dev\\apache-tomcat-9.0.56\\bin'
-	def tomcatStatus = ''
+environment {
+    def tomcatWeb = "C:\\dev\\apache-tomcat-9.0.56\\webapps"
+	def tomcatBin = "C:\\dev\\apache-tomcat-9.0.56\\bin"
+	def tomcatStatus = ""
    
     stages {
         stage('checkout') {
