@@ -33,8 +33,8 @@ pipeline {
 				// bat 'mvn spring-boot:run -Dserver.port=8989 &'
 				
 				bat """
-					cd ${tomcatBin}\\bin
-					startup
+					cd ${tomcatBin}
+					startup &
 				"""
 					
             }
