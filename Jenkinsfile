@@ -29,13 +29,15 @@ pipeline {
 		
 		  stage('startServer') {
             steps {
-					bat "nohup ${tomcatBin}\\startup.bat > /dev/null 2>&1 &"
+					//bat "${tomcatBin}\\startup.bat"
 				// bat 'mvn spring-boot:run -Dserver.port=8989 &'
 				
-			//	bat """
-				//	cd ${tomcatBin}
-					//nohup startup.bat > /dev/null 2>&1 &
-				//"""
+				bat """
+					cd ${tomcatBin}
+					startup.bat&
+					
+					sleep(time:100,unit:"SECONDS")
+				"""
 					
             }
         }
