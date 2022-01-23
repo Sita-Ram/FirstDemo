@@ -35,6 +35,8 @@ pipeline {
 				bat """
 					cd ${tomcatBin}\\bin
 					startup
+				"""
+					
             }
         }
 	}
